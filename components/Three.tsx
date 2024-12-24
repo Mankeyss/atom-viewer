@@ -116,7 +116,6 @@ function MyThree({ type }: { type: number }) {
       oldAtom.traverse((child: any) => {
         if ((child as THREE.Mesh).geometry) {
           (child as THREE.Mesh).geometry.dispose();
-          (child as THREE.Mesh).material.dispose();
         }
       });
     }
@@ -124,7 +123,6 @@ function MyThree({ type }: { type: number }) {
     electronsRef.current.forEach((electron) => {
       scene.remove(electron);
       electron.geometry.dispose();
-      electron.material.dispose();
     });
     electronsRef.current = [];
 
