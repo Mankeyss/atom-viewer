@@ -34,7 +34,7 @@ function UI({ setType, type }: { setType: Function; type: Number }) {
       <div>
         <p className="text-2xl w-20 mt-2">{name}</p>
       </div>
-      <div className="absolute left-0 top-14 lg:top-5 pl-5 w-[500px] pr-[50px] select-none flex gap-2">
+      <div className="absolute left-0 top-14 lg:top-5 pl-5 max-w-[750px] pr-[50px] select-none flex flex-wrap gap-2">
         <div className="flex items-center w-[150px]">
           <div className="w-[30px] h-[30px] bg-[rgb(255,0,0)] mr-2" /> Proton
         </div>

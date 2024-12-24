@@ -56,7 +56,8 @@ function MyThree({ type }: { type: number }) {
     controls.dampingFactor = 0.1;
     controls.zoomSpeed = 1;
     controls.minDistance = 10;
-    controls.maxDistance = 150;
+    controls.maxDistance = 200;
+    controls.enablePan = false;
 
     // === ANIMATION ===
     const animate = () => {
@@ -71,8 +72,8 @@ function MyThree({ type }: { type: number }) {
 
       // Animate electrons
       electronsRef.current.forEach((electron, index) => {
-        const orbitRadiusX = 22 + findShell(index)! * 10; // Different radi for different electrons
-        const orbitRadiusY = 20 + findShell(index)! * 10;
+        const orbitRadiusX = 30 + findShell(index)! * 10; // Different radi for different electrons
+        const orbitRadiusY = 30 + findShell(index)! * 10;
 
         const angle = (Date.now() * 0.001 + index * 0.2) % (Math.PI * 2); // Unique angle for each electron
         const x = orbitRadiusX * Math.cos(angle);
@@ -139,9 +140,9 @@ function MyThree({ type }: { type: number }) {
     for (let i = 0; i < data.elements[type - 1].number; i++) {
       const proton = new THREE.Mesh(geometry, protonMaterial);
       proton.position.set(
-        Math.random() * 10 - 5,
-        Math.random() * 10 - 5,
-        Math.random() * 10 - 5
+        (Math.random() * 10 - 5) * Math.PI,
+        (Math.random() * 10 - 5) * Math.PI,
+        (Math.random() * 10 - 5) * Math.PI
       );
       atom.add(proton);
     }
@@ -155,9 +156,9 @@ function MyThree({ type }: { type: number }) {
     for (let i = 0; i < amountOfNeutrons; i++) {
       const neutron = new THREE.Mesh(geometry, neutronMaterial);
       neutron.position.set(
-        Math.random() * 10 - 5,
-        Math.random() * 10 - 5,
-        Math.random() * 10 - 5
+        (Math.random() * 10 - 5) * Math.PI,
+        (Math.random() * 10 - 5) * Math.PI,
+        (Math.random() * 10 - 5) * Math.PI
       );
       atom.add(neutron);
     }
