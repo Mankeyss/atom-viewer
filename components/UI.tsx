@@ -3,14 +3,16 @@ import data from "../data/PeriodicTable.json";
 
 function UI({ setType, type }: { setType: Function; type: Number }) {
   function handleChange(event: any) {
-    if (inputRef.current === null || inputRef.current === null) return;
-    if (!data.elements[Number(inputRef.current.value) - 1]) return;
-    setType(inputRef.current.value);
-    setName(data.elements[Number(inputRef.current.value) - 1].name);
-    setDescription(data.elements[Number(inputRef.current.value) - 1].summary);
+    if (inputRef.current === null || inputRef.current["value"] === null) return;
+    if (!data.elements[Number(inputRef.current["value"]) - 1]) return;
+    setType(inputRef.current["value"]);
+    setName(data.elements[Number(inputRef.current["value"]) - 1].name);
+    setDescription(
+      data.elements[Number(inputRef.current["value"]) - 1].summary
+    );
     document.title =
       "Particle Viewer | " +
-      data.elements[Number(inputRef.current.value) - 1].name;
+      data.elements[Number(inputRef.current["value"]) - 1].name;
   }
 
   const inputRef = useRef(null);
