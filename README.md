@@ -1,6 +1,6 @@
 Atom viewer lets you see atoms in a close up! It supports all 118 elements.
 
-This project is running react with next.js and three.js.
+This project is running React with Next.js and Three.js.
 
 ## See this project yourself
 The project is currently running on [Vercel](https://atom-viewer.vercel.app).
@@ -20,4 +20,4 @@ Having downloaded and opened your project in a workspace, follow these instructi
 1. Open a terminal (``` Ctrl+Shift+` ``` in vscode)
 2. Run ` npm run dev `
 
-You should now get a message saying `Running on http://localhost:...`
+You should now get a message from Next.js saying `Ready`
