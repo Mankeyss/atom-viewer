@@ -20,4 +20,4 @@ Having downloaded and opened your project in a workspace, follow these instructi
 1. Open a terminal (``` Ctrl+Shift+` ``` in vscode)
 2. Run ` npm run dev `
 
-You should now get a message from Next.js saying `Ready`
+You should now get a message from Next.js saying `Ready`.
